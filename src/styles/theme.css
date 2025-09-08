@@ -1,0 +1,44 @@
+:root{
+  --color-bg: #0b0b0b;      /* fondo global oscuro */
+  --color-fg: #ffffff;      /* texto global claro */
+  --color-accent: #C6FF00;  /* verde lima */
+  --radius-xl: 16px;
+}
+
+/* Reset y base */
+* { box-sizing: border-box; }
+html, body, #root {
+  height: 100%;
+  margin: 0;                 /* <-- elimina márgenes por defecto */
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans";
+}
+
+/* Ant Design: tokens visuales básicos */
+.ant-btn {
+  border-radius: var(--radius-xl);
+  height: 44px;
+  font-weight: 600;
+}
+.ant-btn-primary:not(:disabled) {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #111;
+}
+
+/* Inputs en oscuro */
+.ant-input, .ant-input-affix-wrapper, .ant-input-textarea {
+  background: #111 !important;
+  color: #fff !important;
+  border-color: #222 !important;
+}
+.ant-input::placeholder,
+textarea.ant-input::placeholder {
+  color: #bbb !important;
+}
+
+/* Opcional: suaviza fondo de contenedores */
+.ant-card, .ant-form, .ant-space, .ant-typography {
+  color: #fff;
+}
