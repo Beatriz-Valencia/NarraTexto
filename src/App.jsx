@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
+import { ConfigProvider, theme } from 'antd';
+import VoiceReader from './pages/VoiceReader';
+import './styles/base.css';
+import 'antd/dist/reset.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <ConfigProvider
+      theme={{
+        algorithm: theme.defaultAlgorithm,
+        token: {
+          colorPrimary: '#A3FF12',         // lima
+          colorLink: '#A3FF12',
+          borderRadius: 12,
+          fontSize: 14,
+          colorText: '#0B0B0C',            // texto en componentes (paneles blancos)
+          colorBgContainer: '#FFFFFF',
+        },
+        components: {
+          Button: { controlHeight: 40, fontWeight: 600 },
+          Input: { controlHeight: 40 },
+          Select: { controlHeight: 40 },
+          Slider: { colorPrimaryBorder: '#A3FF12' },
+        }
+      }}
+    >
+      <BrowserRouter>
+        <nav className="site-nav">
+          <Link className="brand" to="/">Audiotexto Visual</Link>
+        </nav>
+        <Routes>
+          <Route path="/" element={<VoiceReader />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </BrowserRouter>
+    </ConfigProvider>
+  );
 }
-
-export default App
