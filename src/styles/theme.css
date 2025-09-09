@@ -1,27 +1,27 @@
 :root{
-  --color-bg: #0b0b0b;      /* fondo global oscuro */
-  --color-fg: #ffffff;      /* texto global claro */
-  --color-accent: #C6FF00;  /* verde lima */
+  --color-bg: #0b0b0b;      
+  --color-fg: #ffffff;      
+  --color-accent: #C6FF00;  
   --radius-xl: 16px;
 }
 
 /* Reset y base */
-* { box-sizing: border-box; }
+* { box-sizing: border-box; }/*cambia la forma en que el navegador calcula width y height incluyendo padding y border*/
 html, body, #root {
   height: 100%;
-  margin: 0;                 /* <-- elimina márgenes por defecto */
+  margin: 0;                
   background: var(--color-bg);
   color: var(--color-fg);
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans";
 }
 
-/* Ant Design: tokens visuales básicos */
+/* Botones Ant Design */
 .ant-btn {
   border-radius: var(--radius-xl);
   height: 44px;
   font-weight: 600;
 }
-.ant-btn-primary:not(:disabled) {
+.ant-btn-primary:not(:disabled) { /*aplica al boton primario si no está deshabilitado*/
   background: var(--color-accent);
   border-color: var(--color-accent);
   color: #111;

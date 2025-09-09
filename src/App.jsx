@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { ConfigProvider, theme as antdTheme } from 'antd';
+import { ConfigProvider, theme as antdTheme } from 'antd'; //proveedor de configuración global de Antd y las opciones del tema
 import Welcome from './pages/Welcome.jsx';
 import Editor from './pages/Editor.jsx';
 import Player from './pages/Player.jsx';
@@ -27,3 +27,4 @@ export default function App() {
     </ConfigProvider>
   );
 }
+//* hace referencia a rutas desconocidas, que se redirigen a inicio

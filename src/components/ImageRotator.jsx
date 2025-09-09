@@ -1,6 +1,7 @@
 import styles from '../styles/voice.module.css';
 
 export default function ImageRotator({ images, index, ready }) {
+    // Si aún no hay imágenes listas, muestra un placeholder 
   if (!images?.length) {
     return <div className={`${styles.imageShell} panel`}>Sin imágenes. Busca un tema o pulsa Reproducir.</div>;
   }

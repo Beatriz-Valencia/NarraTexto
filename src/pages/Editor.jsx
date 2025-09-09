@@ -9,6 +9,8 @@ import AppButton from '../components/ui/AppButton';
 export default function Editor() {
   const navigate = useNavigate();
   const { text, setText, query, setQuery } = useSession();
+// El componente Editor tiene tanto a la navegación como al estado global de la sesión (text, setText, query, etc),
+//Se utiliza el hook personalizado de useSession definido en SessionContext
 
   return (
     <div
