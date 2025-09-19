@@ -2,6 +2,7 @@
 
 [![React](https://img.shields.io/badge/React-18%2F19-61DAFB?logo=react&logoColor=white&style=flat)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-5+-646CFF?logo=vite&logoColor=white&style=flat)](https://vitejs.dev/)
+[![CSS](https://img.shields.io/badge/CSS-Modules-1572B6?logo=css3&logoColor=white&style=flat)](https://developer.mozilla.org/docs/Web/CSS)
 
 
 Aplicación web en React que **convierte texto en una narración hablada acompañada de un pase automático de imágenes relacionadas**, obtenidas desde Unsplash.  
